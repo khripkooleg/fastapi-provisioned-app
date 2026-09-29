@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+.terraform/
+*.tfstate
+*.tfstate.*
+
+*.tfvars
+*.tfvars.json
+
+variables.tf
+
+terraform-plan
+
+.terraform.lock.hcl
