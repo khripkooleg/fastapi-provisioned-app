@@ -1,0 +1,6 @@
+---
+- name: "Configure AWS EC2 Instance"
+  ansible.builtin.include_tasks: "{{ item }}"
+  loop:
+    - "install.yml"
+    - "verify.yml"

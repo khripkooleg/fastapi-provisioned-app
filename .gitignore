@@ -229,3 +229,7 @@ variables.tf
 terraform-plan
 
 .terraform.lock.hcl
+
+group_vars/
+
+inventory.ini
