@@ -1,0 +1,7 @@
+---
+- name: "Provision AWS EC2"
+  hosts: webserver
+  gather_facts: true
+  become: true
+  roles:
+    - aws-infra
