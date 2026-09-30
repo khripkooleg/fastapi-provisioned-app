@@ -20,8 +20,8 @@ async def metrics():
             "memory_usage_available (GB)": round(psutil.virtual_memory().total / GIG_DIVISOR, 1),
             "user": user_name
         }
-    except Exception as exc:
+    except (RuntimeError, OSError) as exc:
         raise HTTPException(
             status_code=500,
-            detail=f"Failed to fetch system metrics: {str(exc)}"
+            detail=str(exc)
         )
