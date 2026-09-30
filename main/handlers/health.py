@@ -10,8 +10,8 @@ async def healthcheck() -> JSONResponse:
             content={"status": "healthy"},
             status_code=200
         )
-    except Exception as exc:
+    except (RuntimeError, OSError) as exc:
         raise HTTPException(
             status_code=500,
-            detail=f"Failed to fetch system metrics: {str(exc)}"
+            detail=str(exc)
         )
