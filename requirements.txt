@@ -2,3 +2,4 @@ fastapi
 psutil
 uvicorn
 pytest
+httpx
